@@ -1,0 +1,317 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Caesar Dressing", system-ui;
+    scroll-behavior: smooth;
+}
+
+.caesar-dressing-regular {
+    font-family: "Caesar Dressing", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+    color: #fafafa;
+    position: relative;
+    text-align: center;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.season{
+    position: absolute;
+    z-index: 10;
+    padding: 10px 30px;
+    background-color: #af6574;
+    bottom: 4%;
+    right: 2%;
+    position: fixed;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    color: #111;
+    transition: all 0.3s ease;
+}
+
+.season:hover{
+    box-shadow: 0px 0px 30px #fafafa; 
+    color: #fafafa;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+}
+
+.navbar{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background: url(florian-olivo-Mf23RF8xArY-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0% 15%;
+    text-align: center;
+}
+
+button{
+    padding: 10px 30px;
+    border: 2px solid #af6574;
+    background-color: transparent;
+    color: #fafafa;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 0.3s all ease;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #af6574;
+    color: #fafafa;
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 5px #fafafa ;
+}
+
+.vision{
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 70%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.cards{
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    background-color: #212121;
+    gap: 15px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.cards:hover{
+    background-color: #af6574;
+    color: #111;
+    transform: translateZ(75px);
+    cursor: pointer;
+}
+
+.cards:hover + *{
+    transform: translateZ(25px) rotateY(20deg);
+}
+
+.cards:has(+ *:hover){
+    transform: translateZ(25px) rotateY(-20deg);
+}
+
+.why{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.why-container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.row{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.elem{
+    height: 20vh;
+    background-color: #af6574;
+    color: #111;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    transition: all 0.3s ease;
+}
+
+.elem:hover{
+    cursor: pointer;
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px #fafafa;
+}
+
+.tournament{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.banner{
+    height: 50vh;
+    width: 100%;
+    background-image: url(banner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer{
+    height: 50vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+@media (max-width:600px) {
+    .vision{
+        height: 170vh;
+        gap: 30px;
+    }
+
+    .card-container{
+        height: 150vh;
+        flex-direction: column;
+    }
+
+    .cards{
+        height: 50vh;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .cards h2{
+        font-size: .7em;
+    }
+
+    .cards p{
+        font-size: 0.5em;
+    }
+
+    .cards:hover{
+        background-color: #af6574;
+        color: #111;
+        transform: translateZ(50px);
+        cursor: pointer;
+    }
+    
+    .cards:hover + *{
+        transform: translateZ(25px) rotateX(-20deg);
+    }
+    
+    .cards:has(+ *:hover){
+        transform: translateZ(25px) rotateX(20deg);
+    }
+
+    .why{
+        height: 150vh;
+    }
+
+    .why-container{
+        flex-direction: column;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .season{
+        font-size: 12px;
+    }
+
+    .elem{
+        height: 30vh;
+        width: 70%;
+    }
+}
+
+@media (max-width:992px) {
+    .cards{
+        height: 50vh;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .cards h2{
+        font-size: 0.9em;
+    }
+
+    .cards p{
+        font-size: 0.6em;
+    }
+}
